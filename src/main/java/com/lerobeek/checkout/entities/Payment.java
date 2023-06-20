@@ -47,11 +47,11 @@ public class Payment implements Serializable {
         this.moment = moment;
     }
 
-    public com.lerobeek.checkout.entities.Order getOrder() {
+    public Order getOrder() {
         return order;
     }
 
-    public void setOrder(com.lerobeek.checkout.entities.Order order) {
+    public void setOrder(Order order) {
         this.order = order;
     }
 
