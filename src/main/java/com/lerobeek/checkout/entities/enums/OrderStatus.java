@@ -1,6 +1,5 @@
 package com.lerobeek.checkout.entities.enums;
 
-import com.lerobeek.checkout.entities.Order;
 
 public enum OrderStatus {
 

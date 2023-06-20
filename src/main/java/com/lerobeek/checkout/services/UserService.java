@@ -20,6 +20,9 @@ public class UserService {
 
     public User findById(Long id){
        Optional<User> user = userRepository.findById(id);
-       return user.get();
+       if (user.isPresent()){
+           return user.get();
+       }
+       return null;
     }
 }

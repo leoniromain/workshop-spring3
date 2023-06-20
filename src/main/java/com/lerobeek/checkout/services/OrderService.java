@@ -1,9 +1,7 @@
 package com.lerobeek.checkout.services;
 
 import com.lerobeek.checkout.entities.Order;
-import com.lerobeek.checkout.entities.User;
 import com.lerobeek.checkout.repositories.OrderRepository;
-import com.lerobeek.checkout.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -22,6 +20,9 @@ public class OrderService {
 
     public Order findById(Long id){
        Optional<Order> order = orderRepository.findById(id);
-       return order.get();
+       if (order.isPresent()){
+           return order.get();
+       }
+        return null;
     }
 }
