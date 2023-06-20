@@ -20,9 +20,6 @@ public class OrderService {
 
     public Order findById(Long id){
        Optional<Order> order = orderRepository.findById(id);
-       if (order.isPresent()){
-           return order.get();
-       }
-        return null;
+        return order.orElse(null);
     }
 }
